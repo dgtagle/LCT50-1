@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gomez.lct50_1.MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Tiempo para Concentración Letal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textoLado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Lado"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginTop="0dp" />
+    <TextView
+        android:id="@+id/ladoMetros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="46dp"
+        android:padding="16dp"
+        android:text="0 metros"
+        app:layout_constraintLeft_toRightOf="@+id/textoLado"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:id="@+id/ladoMas"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:onClick="maslado"
+        android:padding="16dp"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@+id/ladoMetros"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <Button
+        android:id="@+id/ladoMenos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="menoslado"
+        android:padding="16dp"
+        android:text="-"
+        app:layout_constraintLeft_toRightOf="@+id/ladoMas"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <TextView
+        android:id="@+id/textoAncho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Ancho"
+        app:layout_constraintTop_toBottomOf="@+id/textoLado"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginTop="0dp" />
+    <TextView
+        android:id="@+id/anchoMetros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:padding="16dp"
+        android:text="0 metros"
+        app:layout_constraintLeft_toRightOf="@+id/textoAncho"
+        app:layout_constraintTop_toBottomOf="@+id/ladoMetros"
+        android:layout_marginStart="54dp" />
+
+    <Button
+        android:id="@+id/anchoMas"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:onClick="masancho"
+        android:padding="16dp"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@+id/anchoMetros"
+        app:layout_constraintTop_toBottomOf="@+id/ladoMas" />
+
+    <Button
+        android:id="@+id/anchoMenos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="menosancho"
+        android:padding="16dp"
+        android:text="-"
+        app:layout_constraintLeft_toRightOf="@+id/anchoMas"
+        app:layout_constraintTop_toBottomOf="@+id/ladoMenos" />
+
+    <TextView
+        android:id="@+id/textoAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Alto"
+        app:layout_constraintTop_toBottomOf="@+id/textoAncho"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginTop="0dp" />
+    <TextView
+        android:id="@+id/altoMetros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="68dp"
+        android:padding="16dp"
+        android:text="0 metros"
+        app:layout_constraintLeft_toRightOf="@+id/textoAlto"
+        app:layout_constraintTop_toBottomOf="@+id/anchoMetros"
+        android:layout_marginStart="68dp" />
+
+    <Button
+        android:id="@+id/altoMas"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:onClick="masalto"
+        android:padding="16dp"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@+id/anchoMetros"
+        app:layout_constraintTop_toBottomOf="@+id/anchoMas"
+        android:layout_marginTop="2dp" />
+
+    <Button
+        android:id="@+id/altoMenos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="menosalto"
+        android:padding="16dp"
+        android:text="-"
+        app:layout_constraintLeft_toRightOf="@+id/anchoMas"
+        app:layout_constraintTop_toBottomOf="@+id/anchoMenos" />
+
+    <TextView
+        android:id="@+id/textoContenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Contenido"
+        app:layout_constraintTop_toBottomOf="@+id/textoAlto"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginTop="0dp" />
+    <TextView
+        android:id="@+id/contenidogramos"
+        android:layout_width="88dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="30dp"
+        android:padding="16dp"
+        android:text="0 gramos"
+        app:layout_constraintLeft_toRightOf="@+id/textoContenido"
+        app:layout_constraintTop_toBottomOf="@+id/altoMetros"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:id="@+id/contenidoMas"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:onClick="mascontenido"
+        android:padding="16dp"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@+id/contenidogramos"
+        app:layout_constraintTop_toBottomOf="@+id/altoMas"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:id="@+id/contenidoMenos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="menoscontenido"
+        android:padding="16dp"
+        android:text="-"
+        app:layout_constraintLeft_toRightOf="@+id/contenidoMas"
+        app:layout_constraintTop_toBottomOf="@+id/altoMenos"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="0dp" />
+
+
+    <Button
+        android:id="@+id/botonCS"
+        style="@style/BotonCS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="calcularcs"
+        android:text="Calcular CS"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoContenido"
+       />
+
+    <Button
+        android:id="@+id/botonCN"
+        style="@style/BotonCN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="calcularcn"
+        android:text="Calcular CN"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonCS"/>
+
+    <EditText
+        android:id="@+id/totalminutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:text=""
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonCN" />
+
+
+</android.support.constraint.ConstraintLayout>
